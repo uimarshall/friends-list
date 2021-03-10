@@ -1,0 +1,11 @@
+# Switching from Sqlite3 to Postgres
+
+Use this link:=> https://medium.com/@thorntonbrenden/ruby-on-rails-switch-from-sqlite3-to-postgres-590009645c25
+Change the `database.yml` file from sqlite3 config to postgres config
+config ENV variable using `figaro gem`
+Locate the `application.yml` file after running: bundle exec figaro install
+Then configure the ENV Variables which includes:
+1. FRIENDS_LIST_DATABASE_USER:
+2. FRIENDS_LIST_DATABASE_PASSWORD:
+
+After the whole setup run: `rails db:migrate`
