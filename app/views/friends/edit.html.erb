@@ -1,4 +1,15 @@
-<h1>Editing Friend</h1>
-<%= render 'form', friend: @friend %>
-<%= link_to 'Show', @friend, class:"btn btn-warning text-white" %> |
-<%= link_to 'Back', friends_path, class:"btn btn-info text-white" %>
+<%# <%= render 'form', friend: @friend %>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="card text-center" style="width: 28rem;">
+    <div class="card-header">
+      <h1>Editing Friend</h1>
+    </div>
+    <div class="card-body">
+      <%= render 'form', friend: @friend %>
+    </div>
+    <div class="card-footer text-muted">
+      <%= link_to 'Show', @friend, class:"btn btn-warning text-white" %> |
+      <%= link_to 'Back', friends_path, class:"btn btn-info text-white" %>
+    </div>
+  </div>
+</div>
