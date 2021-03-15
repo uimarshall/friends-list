@@ -2,7 +2,6 @@
   <% if friend.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
-
       <ul>
         <% friend.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -10,33 +9,48 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">First Name</div>
+      </div>
+      <%= form.text_field :first_name, class:"form-control", placeholder: "Your first name" %>
+    </div>
   </div>
-
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :twitter %>
-    <%= form.text_field :twitter %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">Last Name</div>
+      </div>
+      <%= form.text_field :last_name, class:"form-control", placeholder: "Your last name" %>
+    </div>
+    <div class="field form-group">
+      <%= form.label :email %>
+      <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">@</div>
+        </div>
+        <%= form.text_field :email, class:"form-control", placeholder: "Your last email" %>
+      </div>
+      <div class="field form-group">
+        <%= form.label :phone %>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Phone</div>
+          </div>
+          <%= form.text_field :phone, class:"form-control", placeholder: "Your phone number" %>
+        </div>
+        <div class="field form-group">
+          <%= form.label :twitter %>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Twitter</div>
+            </div>
+            <%= form.text_field :twitter, class:"form-control", placeholder: "Your twitter handle" %>
+          </div>
+          <div class="actions">
+            <%= form.submit class:"btn btn-warning text-white" %>
+          </div>
+        <% end %>
