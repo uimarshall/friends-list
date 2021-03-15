@@ -16,6 +16,9 @@ gem 'sass-rails', '>= 6'
 # Use Bootstrap for styling
 # gem 'bootstrap', '~> 5.0.0.beta2'
 
+# Use devise for user management
+gem 'devise', '~> 4.7', '>= 4.7.3'
+
 # Use JQuery
 # gem 'jquery-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
