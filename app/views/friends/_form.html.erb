@@ -50,7 +50,13 @@
             </div>
             <%= form.text_field :twitter, class:"form-control", placeholder: "Your twitter handle" %>
           </div>
+          <div class="input-group mb-2 mr-sm-2">
+            <%# <div class="input-group-prepend">
+              <div class="input-group-text">User</div>
+            </div> %>
+            <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+          </div>
           <div class="actions">
-            <%= form.submit class:"btn btn-warning btn-block text-white" %>
+            <%= form.submit class:"btn btn-success btn-block text-white" %>
           </div>
         <% end %>
