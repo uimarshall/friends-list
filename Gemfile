@@ -47,6 +47,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'hirb', '~> 0.7.3'
   gem 'rubocop', '~>0.81.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
