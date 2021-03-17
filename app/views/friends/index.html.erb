@@ -27,8 +27,8 @@
             <td>Sign in to see</td>
           <% end %>
           <td><%= link_to 'Show', friend %></td>
-          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
-          <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-primary' %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend), class:"btn btn-success text-white" %></td>
+          <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger' %></td>
         </tr>
       <% end %>
     </tbody>
